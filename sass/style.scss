@@ -1,0 +1,123 @@
+@import './normalize.css';
+
+body{
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: white;
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: {
+            image: url('/images/pexels-photo-169573.jpeg');
+            position: center;
+            repeat: no-repeat;
+            size: cover;
+        }
+        filter: brightness(.4) blur(1px);
+    }
+    &__title-wrapper {
+        text-align: center;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__button {
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .8);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__list {
+        list-style-type: none;
+        padding: 0; 
+    }
+    &__item {
+        display: inline-block;
+        &-link {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+.about {
+    &__container {
+        display: flex;
+        height: 50vw;
+        padding: 32px;
+    }
+    &__photo {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        &-wrapper {
+            flex: 1;
+        }
+    }
+    &__info {
+        flex: 2;
+    }
+}
+.skills {
+    &__container {
+        padding: 32px
+    }
+    &__list {
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        flex: 1;
+        height: 110px;
+    }
+    &__logo {
+        padding: 8px;
+        width: 100%;
+        display: block;
+        height: 100%;
+    }
+}
+.projects {
+    &__container {
+        width: 100%;
+    }
+    &__list {
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    &__item {
+        flex: 1;
+        padding: 8px;
+    }
+}
