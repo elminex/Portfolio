@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A begginer front-end developer portfolio.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "parcel index.html --open --no-autoinstall --port 3000",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elminex/Portfolio.git"
+  },
+  "author": "Paweł Tuliński",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elminex/Portfolio/issues"
+  },
+  "homepage": "https://github.com/elminex/Portfolio#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.22.3"
+  }
+}

@@ -1,7 +1,15 @@
 @import './normalize.css';
 
-body{
+body {
     box-sizing: border-box;
+    background-color: lightgray;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 16px;
+    margin: 0 auto;
 }
 
 .header {
@@ -9,6 +17,7 @@ body{
     height: 100vh;
     position: relative;
     color: white;
+
     &:before {
         content: '';
         width: 100%;
@@ -16,14 +25,17 @@ body{
         position: absolute;
         top: 0;
         left: 0;
+
         background: {
             image: url('/images/pexels-photo-169573.jpeg');
             position: center;
             repeat: no-repeat;
             size: cover;
         }
-        filter: brightness(.4) blur(1px);
+
+        filter: brightness(.7) blur(1px);
     }
+
     &__title-wrapper {
         text-align: center;
         margin: 0 auto;
@@ -32,6 +44,7 @@ body{
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     &__button {
         position: absolute;
         bottom: 16px;
@@ -39,23 +52,30 @@ body{
         transform: translateX(-50%);
     }
 }
+
 .nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    z-index: 20;
     background-color: rgba(0, 0, 0, .8);
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    &__container {
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__list {
         list-style-type: none;
-        padding: 0; 
+        padding: 0;
     }
+
     &__item {
         display: inline-block;
+
         &-link {
             color: #fff;
             text-decoration: none;
@@ -66,24 +86,27 @@ body{
 .about {
     &__container {
         display: flex;
-        height: 50vw;
-        padding: 32px;
+        background-color: white;
     }
+
     &__photo {
         display: block;
         width: 100%;
         object-fit: cover;
+
         &-wrapper {
             flex: 1;
         }
     }
+
     &__info {
         flex: 2;
     }
 }
+
 .skills {
     &__container {
-        padding: 32px
+        background-color: white;
     }
     &__list {
         width: 100%;
@@ -93,10 +116,41 @@ body{
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
     &__item {
         flex: 1;
-        height: 110px;
+        height: 100px;
+        background: {
+            repeat: no-repeat;
+            position: center;
+            size: contain;
+        }
+        &.html {
+            background-image: url("../images/HTML5_Logo.svg");
+        }
+        &.css {
+            background-image: url("../images/CSS3_logo_and_wordmark.svg");
+        }
+        &.js {
+            background-image: url("../images/Unofficial_JavaScript_logo_2.svg");
+        }
+        &.rwd {
+            background-image: url("../images/512px-Responsive_Web_Design_Logo.svg.png");
+        }
+        &.bootstrap {
+            background-image: url("../images/Boostrap_logo.svg.png");
+        }
+        &.git {
+            background-image: url("../images/Git-Logo-2Color.png");
+        }
+        &.sass {
+            background-image: url("../images/sass-logo/Sass\ Logo\ -\ Seal\ \(Color\).eps");
+        }
+        &.react {
+            background-image: url("../images/1024px-React-icon.svg.png");
+        }
     }
+
     &__logo {
         padding: 8px;
         width: 100%;
@@ -104,9 +158,10 @@ body{
         height: 100%;
     }
 }
+
 .projects {
     &__container {
-        width: 100%;
+        background-color: white;
     }
     &__list {
         width: 100%;
@@ -116,8 +171,25 @@ body{
         flex-wrap: wrap;
         justify-content: space-around;
     }
+
     &__item {
-        flex: 1;
+        width: calc(50% - 16px);
         padding: 8px;
     }
+}
+.contact {
+    &__container {
+        background-color: white;
+    }
+    &__link {
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        font-size: 32px;
+    }
+}
+.footer {
+    text-align: center;
+    background-color: black;
+    color: white;
 }
